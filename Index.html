@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YEBA - Kin | Accueil</title>
+  <link rel="shortcut icon" href="./Images/ont.png" type="image/png">
+  <link rel="stylesheet" href="./Assets/FONTAWESOME/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./Assets/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./Assets/animate.css-4.1.1/animate.min.css">
+  <link rel="stylesheet" href="./Assets/CSS/styles.css" />
+  <style>
+    @import url(./Assets/CSS/styles.css);
+
+    .item3 {
+      background-image: url("./Images/kin-belle.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .item2 {
+      background-image: url("./Images/Kin-by-night.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .item1 {
+      background-image: url("./Images/nature1.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .carousel-item {
+      height: 70vh;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .info-card {
+      min-height: 200px;
+    }
+
+    .card-body h5 {
+      font-size: 1.25rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="bg-success-subtle" id="loader">
+    <div class="row d-flex justify-content-center">
+      <div class="col-12 text-center">
+        <div>
+          <h1 class="text-center text-yebakin loader" style="font-size: 2.8em;"> YEBA Kin </h1>
+        </div>
+      </div>
+      <div class="col-12 py-4 text-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-2">
+              <!-- Spinner de Bootstrap -->
+              <div class="spinner p-4 d-flex justify-content-center " role="status">
+                <i class="">
+
+                </i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 text-center">
+        <div class="d-flex justify-content-center">
+          <span class="visually lucida text-center text-yebakin" style="font-size: 1.6em;">
+            Veuillez patienter
+          </span>
+        </div>
+        <div class="d-flex justify-content-center">
+          <span class="visually lucida text-center py-2 text-yebakin" style="font-size: 1.1em;">
+            En cours de chargement...
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="container-fluid nav-bg fixed-top entete2">
+      <div class="row d-flex justify-content-between align-items-center px-2">
+        <div class="navbar d-flex text-light text-center col-lg-1 d-none d-lg-flex">
+          <div class="d-flex align-items-center">
+            <img src="./Images/ONT1.png" alt="Logo" class="img-fluid rounded-circle logo" />
+            <h4 class="navbar-brand text-light ok-titre ps-3 pointer-none">
+              YEBA KIN
+            </h4>
+          </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark col-md-10 col-lg-11 d-flex justify-content-between">
+          <div class="align-items-center">
+            <img src="./Images/ONT1.png" alt="Logo" class="img-fluid d-lg-none rounded-circle logo" />
+            <a class="navbar-brand d-lg-none lucida-text ok-titre pointer-none">
+              YEBA KIN
+            </a>
+          </div>
+          <button class="navbar-toggler text-end text-light btn-menu bouton-menu" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-end"> </span>
+            <span class="lucida-text menu"> Menu </span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <button class="btn border-bottom-light bg-transparent text-light" onclick="Accueil();">
+                  Accueil
+                </button>
+              </li>
+              <li class="nav-item dropdown">
+                <button type="button" class="border-bottom-light btn px-1 bg-transparent text-light"
+                  onclick="Apropos();">
+                  A propos
+                </button>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="dropdown-toggle btn bg-transparent text-light" type="button" id="navbarDropdown"
+                  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Découvertes
+                </button>
+                <ul class="dropdown-menu entete2 nav-bg" aria-labelledby="navbarDropdown">
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu bttn btn bg-transparent text-light"
+                      onclick="themathique();">
+                      Thématique
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu btn bg-transparent text-light"
+                      onclick="Edifices_publiques();">
+                      Edifices publics
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu btn bg-transparent text-light"
+                      onclick="place_publique();">
+                      Places publiques
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu bttn btn bg-transparent text-light"
+                      onclick="infos();">
+                      Information utiles
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu btn bg-transparent text-light"
+                      onclick="sites();">
+                      Sites et Attractions
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu btn bg-transparent text-light"
+                      onclick="cartos();">
+                      Cartographie de Kinshasa
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="dropdown-toggle btn bg-transparent text-light" type="button" id="navbarDropdown"
+                  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Séjour à Kin
+                </button>
+                <ul class="dropdown-menu entete2 nav-bg" aria-labelledby="navbarDropdown">
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu btn bg-transparent text-light"
+                      onclick="shopping();">
+                      Shopping
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu btn bg-transparent text-light"
+                      onclick="transports();">
+                      Transport
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu btn bg-transparent text-light"
+                      onclick="restaurants();">
+                      Restaurations
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu bttn btn bg-transparent text-light"
+                      onclick="hebergements();">
+                      Hebergements
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu btn bg-transparent text-light"
+                      onclick="loisir();">
+                      Sports et Loisirs
+                    </button>
+                  </li> 
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="dropdown-toggle btn bg-transparent text-light" type="button" id="navbarDropdown"
+                  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Circuits
+                </button>
+                <ul class="dropdown-menu entete2 nav-bg" aria-labelledby="navbarDropdown">
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu bttn btn bg-transparent text-light">
+                      Kin à vélo
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu bttn btn bg-transparent text-light"
+                      onclick="excursion();">
+                      Excursion
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu bttn btn bg-transparent text-light">
+                      Village Touristique
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu bttn btn bg-transparent text-light"
+                      onclick="Randonnees();">
+                      Kin et ses environs
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu bttn btn bg-transparent text-light"
+                      onclick="Randonnees();">
+                      Randonnées Fluviales
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu bttn btn bg-transparent text-light">
+                      Kin en 3 Jours et en 7 Jours
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item bouton-menu bttn btn bg-transparent text-light">
+                      Wewa Tour (Trycicles et motos)
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <button type="button" class="border-bottom-light btn px-1 bg-transparent text-light"
+                  onclick="Evenements();">
+                  Evenements
+                </button>
+              </li>
+              <li>
+                <button type="button" class="border-bottom-light btn px-1 bg-transparent text-light"
+                  onclick="boites();">
+                  Kin By Night
+                </button>
+              </li>
+              <li>
+                <button type="button" class="border-bottom-light btn px-1 bg-transparent text-light"
+                  onclick="services();">
+                  Services
+                </button>
+              </li>
+              <li>
+                <button type="button" class="border-bottom-light btn px-1 bg-transparent text-light"
+                  onclick="contacts();">
+                  Contacts
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row d-flex justify-content-center p-0">
+        <div class="w-100 p-0 m-0">
+          <div id="carousel-hybride"
+            class="carousel slide d-flex justify-content-center align-items-center p-0 m-0 mb-4"
+            data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carousel-hybride" aria-label="slide 1" data-bs-slide-to="0"
+                class="active" aria-current="true"></button>
+              <button type="button" data-bs-target="#carousel-hybride" aria-label="slide 2" data-bs-slide-to="1"
+                class=""></button>
+              <button type="button" data-bs-target="#carousel-hybride" aria-label="slide 3" data-bs-slide-to="2"
+                class=""></button>
+              <button type="button" data-bs-target="#carousel-hybride" aria-label="slide 4" data-bs-slide-to="3"
+                class=""></button>
+              <button type="button" data-bs-target="#carousel-hybride" aria-label="slide 4" data-bs-slide-to="4"
+                class=""></button>
+            </div>
+            <div class="carousel-inner ">
+              <div class="carousel-item active">
+                <img src="Images/Acceuil/tour jumelles.jpeg" alt="Carousel-item 1"
+                  class="w-100 rounded-bottom-4 d-block h-100">
+                <div class="carousel-caption d-block animate__animated animate__fadeInDown">
+                  <h3 class=" animations pt-5 verdana">Bienvenue à Kinshasa <span class="h4">RD Congo</span></h3>
+                  <h1 class="h2 py-2">Office National du Tourisme</h1>
+                  <h1 class="text-center h4 py-2"> Agence Provinciale de Kinshasa </h1>
+                </div>
+
+              </div>
+              <div class="carousel-item">
+                <img src="./Images/Acceuil/image (19).png" alt="Carousel-item 2"
+                  class="w-100 h-100 rounded-bottom-4 d-block img-fluid">
+                <div class="carousel-caption d-block animate__animated animate__fadeInUp">
+                  <h3 class=" animations pt-5 verdana">Bienvenue à Kinshasa <span class="h4">RD Congo</span></h3>
+                  <h1 class="h2 py-2">Office National du Tourisme</h1>
+                  <h1 class="text-center h4 py-2"> Agence Provinciale de Kinshasa </h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="Images/Acceuil/DGA nomination-54[1].jpg" alt="Carousel-item 3"
+                  class="w-100 h-100 rounded-bottom-4 d-block">
+                <div class="carousel-caption d-block animate__animated animate__fadeInRight">
+                  <h3 class=" animations pt-5 verdana">Bienvenue à Kinshasa <span class="h4">RD Congo</span></h3>
+                  <h1 class="h2 py-2">Office National du Tourisme</h1>
+                  <h1 class="text-center h4 py-2"> Agence Provinciale de Kinshasa </h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="Images/New_look/nature.jpg" alt="Carousel-item 3"
+                  class="w-100 h-100 rounded-bottom-4 d-block">
+                <div class="carousel-caption d-block animate__animated animate__fadeInRight">
+                  <h3 class=" animations pt-5 verdana">Bienvenue à Kinshasa <span class="h4">RD Congo</span></h3>
+                  <h1 class="h2 py-2">Office National du Tourisme</h1>
+                  <h1 class="text-center h4 py-2"> Agence Provinciale de Kinshasa </h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="Images/Acceuil/masque-teke-kidumu.jpg" alt="Carousel-item 1"
+                  class="w-100 h-100 rounded-bottom-4 d-block">
+                <div class="carousel-caption d-block animate__animated animate__fadeInDown">
+                  <h3 class=" animations pt-5 verdana">Bienvenue à Kinshasa <span class="h4">RD Congo</span></h3>
+                  <h1 class="h2 py-2">Office National du Tourisme</h1>
+                  <h1 class="text-center h4 py-2"> Agence Provinciale de Kinshasa </h1>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-next" data-bs-target="#carousel-hybride" data-bs-slide="next">
+              <span class="carousel-control-next-icon">
+
+              </span>
+            </button>
+            <button class="carousel-control-prev" data-bs-target="#carousel-hybride" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon">
+
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="centre">
+        <div class="container-sm container-lg container-md container-xs py-5">
+          <div class="row d-flex justify-content-around">
+            <div class="col-xs-12 col-sm-5 col-md-3 col-lg-3 text-center border rounded-4 shadow m-3 pointer card"
+              onclick="presentation();">
+              <div class="p-0 m-2">
+                <div class="">
+                  <i class="fa fa-institution fa-4x rounded-circle p-5 color-1">
+
+                  </i>
+                </div>
+                <div class="">
+                  <h3 class="h3 text-center py-2 text1">
+                    Présentation
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-3 col-lg-3 text-center border rounded-4 shadow m-3 pointer card"
+              onclick="hebergements();">
+              <div class="p-0 m-2">
+                <div class="">
+                  <i class="fa fa-hotel fa-4x rounded-circle p-5 color-5">
+
+                  </i>
+                </div>
+                <div class="">
+                  <h3 class="h3 text-center py-2 text5">
+                    Hébérgement
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-3 col-lg-3 text-center border rounded-4 shadow m-3 pointer card"
+              onclick="restaurants();">
+              <div class="p-0 m-2">
+                <div class="">
+                  <i
+                    class="fa fa-cutlery fa-4x rounded-circle color-6 px-5 pt-5 pb-4 justify-content-center align-items-center">
+
+                  </i>
+                </div>
+                <div class="">
+                  <h3 class="h3 text-center py-2 text6">
+                    Restauration
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-3 col-lg-3 text-center border rounded-4 shadow m-3 pointer card"
+              onclick="sites();">
+              <div class="p-0 m-2 col-12">
+                <div class="col-12 d-flex justify-content-center text-center">
+
+                  <img src="./Images/Icons/ech logos.jpg" alt="logos Site et Attractions"
+                    class="img-fluid col-7 border border-success border-3 rounded-circle color-2 px-3 py-4">
+
+                  <!-- <i class="fa fa-leaf fa-4x rounded-circle p-5 color-3">
+
+                  </i> -->
+                </div>
+                <div class="">
+                  <h3 class="h3 text-center py-2 text-success">
+                    Sites et Attractions
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-3 col-lg-3 text-center border rounded-4 shadow m-3 pointer card"
+              onclick="boites();">
+              <div class="p-0 col-12">
+                <div class="col-12 m-2">
+                  <img src="./Images/Icons/djinight.jpg" alt="logos Site et Attractions"
+                    class="img-fluid col-7 rounded-circle color-2 p-4">
+
+                  <!-- <i class="fa fa-headphones fa-4x rounded-circle p-5 color-2">
+
+                  </i> -->
+                </div>
+                <div class="">
+                  <h3 class="h3 text-cente text2">
+                    Kin By Night
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-3 col-lg-3 text-center border rounded-4 shadow m-3 pointer card"
+              onclick="Evenements();">
+              <div class="p-0 m-2">
+                <div class="">
+                  <i class="fa fa-bell fa-4x rounded-circle p-5 color-4">
+
+                  </i>
+                </div>
+                <div class="">
+                  <h3 class="h3 text-center py-2 text4">
+                    Evènements
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-xs-12 col-sm-11 col-md-10 col-lg-9">
+              <button class="btn btn-outline-primary lead form-control animation-outline" onclick="visit();">
+                <span class="lead">
+                  PRÊT À VISITER KINSHASA ?
+                </span>
+                <i class="fa fa-travel">
+
+                </i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer py-4 mt-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-2">
+          <button type="button" class="btn bg-transparent p-3">
+            <i class="fa fa-facebook text-primary fa-2x"> </i>
+            <span class="d-none"> Facebook </span>
+          </button>
+        </div>
+        <div class="col-2">
+          <button name="btn" type="button" class="btn bg-transparent p-3">
+            <i class="fa fa-whatsapp text-success fa-2x"> </i>
+            <span class="d-none"> Whatsapp </span>
+          </button>
+        </div>
+        <div class="col-2">
+          <button type="button" class="btn bg-transparent p-3">
+            <i class="fa fa-instagram text-info fa-2x"> </i>
+            <span class="d-none"> Instagram </span>
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center">
+          <h6 class="text-light text-center">
+            Tout Droits reservé &copy; YEBA KIN &coprod; APKIN
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./Assets/bootstrap-5.3.3-dist/js/jquery.js"></script>
+  <script src="./Assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+  <script src="./Scripts/Js.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(() => {
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+
+      });
+    });
+  </script>
+</body>
+
+</html>
