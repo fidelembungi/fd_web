@@ -1,0 +1,102 @@
+<div class="row">
+        <div class="row d-flex justify-content-center">
+            <div class="col-7 p-3 ">
+                <div class="card">
+                    <div class="card-header text-center bg-primary text-light">
+                        Medecin
+                    </div>
+                    <div class=" card-body">
+                        <div class="row mb-3">
+                            <div class=" col-4">
+                                Nommed
+                            </div>
+                            <div class="col-8">
+                         <input id="nommed" type="text" class="form-control" placeholder="Nommed">
+                            </div>
+
+                        </div>
+                        <div class="row mb-3">
+                            <div class=" col-4">
+                                idfich
+                            </div>
+                            <div class="col-8">
+                                <input id="idfich"  type="text" class="form-control" placeholder="idfich" >
+                            </div>
+
+                        </div>
+                        <div class="row mb-3">
+                            <div class=" col-4">
+                                Téléphone
+                            </div>
+                            <div class="col-8">
+                                <input id="telephone" type="text" class="form-control" placeholder="Téléphone">
+                            </div>
+
+                        </div>
+                        <div class="row mb-3">
+                            <div class=" col-4">
+                                Sexe
+                            </div>
+                            <div class="col-5">
+                               <select name="" id="sexe" class="form-control">
+                                <option value="Sexe">Sexe</option>
+                                    <option value="M">M</option>
+                                    <option value="F">F</option>
+                                 </select>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="card-footer text-center">
+                        <div class="row">
+                            <div class="col-6 p-2">
+                                <button class="btn btn-danger"><i class="fa fa-close"></i> Annuler</button>
+                            </div>
+                            <div class="col-6 p-2">
+                                <button class="btn btn-success" onclick="Ajouter_medecin();"><i class="fa fa-save"></i> Enregistrer</button>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row text-center  ">
+            <div class="col-12">
+                <table class=" table table-bordered table-striped table-hover border-primary mx-4">
+                    
+                        <thead class=" text-light bg-primary text-center  " style="background: white; " >
+                            <th>Nommed</th>
+                            <th>idfich</th>
+                            <th>Téléphone</th>
+                            <th>Sexe</th>
+                        </thead>
+                  <tbody id="medecinlist">
+                     
+                    <tr>
+                      
+                       
+                    </tr>
+                  </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+        <script src="../Bootstrap5.1.3/js/bootstrap.bundle.js"></script>
+        <script src="../Bootstrap5.1.3/js/jquery.js"></script>
+        <script src="../Bootstrap5.1.3/js/controller.js"></script>
+           <script>
+             medecinlist();
+          $(document).ready(function(){
+              medecinlist();
+    });
+           </script>

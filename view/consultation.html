@@ -1,0 +1,93 @@
+
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xs-12 col-sm-12 col-md-7 p-3 ">
+            <div class="card">
+                <div class="card-header text-center bg-primary text-light">
+                Consultation
+                </div>
+                <div class=" card-body">
+                    <div class="row mb-3">
+                        <div class="col-xs-12 col-sm-12 col-md-4">
+                            Date d'arriver
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-8">
+                            <input id="date_arriver" type="date" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-xs-12 col-sm-12 col-md-4">
+                            Date de regle
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-8">
+                            <input id="date_regle" type="date" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-xs-12 col-sm-12 col-md-4">
+                            Poid
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-8">
+                            <input id="poid" type="text" class="form-control" placeholder="Poid">
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="card-footer ">
+                    <div class="row  justify-content-between">
+                    <div class="col-6">
+                            <button class="btn btn-danger"><i class="fa fa-close"></i> Annuler</button>
+                        </div>
+                        <div class="col-6 text-end">
+             <button class="btn btn-success" onclick="Ajouter_consultation();"><i class="fa fa-save"></i> Enregistrer</button>
+                      
+                        </div>
+
+                    </div>
+
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 p-3 ">
+            
+           
+                <div class="row  p-2">
+                    <h5 style=" font-weight: bold;" class="text-primary text-center">Consultation</h5>
+                    
+                    <table class=" table table-bordered table-striped table-hover border-primary mx-4" >
+                        
+                        <thead class="bg-primary text-light text-center" >
+                            <th>Date d'arriver</th>
+                            <th>Date regle</th>
+                            <th>Poid</th>
+                            
+                        </thead>
+                        <tbody id="consultationlist">
+                            
+                            <tr>
+                                
+                            </tr>
+                           
+                        </tbody>
+        
+                    </table>
+                </div>  
+        
+           
+
+        </div>
+    </div>
+
+</div>
+<script src="Bootstrap5.1.3/js/bootstrap.bundle.js"></script>
+<script src="Bootstrap5.1.3/js/jquery.js"></script>
+<script src="Bootstrap5.1.3/js/controller.js"></script>
+<Script>
+    consultationlist();
+    $(document).ready(function(){
+        consultationlist();
+    });
+</Script>
